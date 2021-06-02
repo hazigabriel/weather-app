@@ -1,0 +1,98 @@
+/*.sky-gradient-03 { background: linear-gradient(to bottom, #020111 10%,#3a3a52 100%); } /*night */
+
+/*.sky-gradient-06 { background: linear-gradient(to bottom, #4a4969 0%,#7072ab 50%,#cd82a0 100%); } /*morning */
+
+/*.sky-gradient-12 { background: linear-gradient(to bottom, #90dffe 0%,#38a3d1 100%); } /*afternoon */
+
+.bold {
+	font-weight: bold;
+}
+.cityName {
+	font-size: 2em;
+	margin-top: -3vw
+}
+.weatherStatus {
+	font-size: 1.2em
+}
+ 
+.pin-icon {
+	height: 1.5em;
+	color:white;
+}
+.column .has-addons {
+ 	overflow:hidden;
+}
+.temperature {
+	font-size: 4.5em;
+ 	font-weight: bold;
+ 	top: 0 !important
+}
+.center {
+	padding-top: 40vh !important;
+	background-color: red
+}
+.topSpace {
+	padding-top: 10vw  
+}
+.topSpace h4 {
+	margin-top: -3vw
+}
+.switchForm {
+	display: inline
+}
+.day {
+	margin: 0 2vw 5vh 0 !important;
+	padding: 0 0 2vh 1vw !important;
+	width: 14vw !important;
+ 	border-radius: 10px;
+	background-color: #fafafa;
+	box-shadow: 5px 2px 5px #e0e0e0
+
+}
+
+.day h6 {
+	padding-bottom: 1vh
+}
+.day p{
+	margin-bottom: -0.5vh;
+
+}
+.switch {
+	background-color: #e0e0e0;
+	border-radius: 10px;
+	width:10vw;
+
+	text-align: center;
+	user-select: none;
+
+}
+.switch p{
+	display: inline;
+	cursor: pointer;
+}
+.active {
+	font-weight: bold;
+	color:#20c997;
+}
+ 
+
+@media screen and (max-width: 768px) {
+	.switch {
+		width: 25vw;
+		float:right;
+	}
+	.day {
+		width: 20vw !important;
+		margin: 0 2vw 5vh 0 !important;
+		background: red
+	}
+
+ 
+}
+@media screen and (max-width: 576px){
+	.day {
+		width:90vw !important;
+	 	margin: 3vh auto !importants;
+		background: blue
+	}
+}
