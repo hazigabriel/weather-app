@@ -8,6 +8,7 @@ function renderCurrentWeather(cityName, country, temperature, forecast, forecast
 }
 
 function getWindDirection(deg){
+	if(deg==0) return "";
     if (deg>337.5) return 'N';
     if (deg>292.5) return 'NW';
     if(deg>247.5) return 'W';
