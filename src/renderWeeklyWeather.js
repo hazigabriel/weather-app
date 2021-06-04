@@ -5,13 +5,12 @@ function renderWeeklyWeather(apiObj){
 	let forecast = document.querySelectorAll(".weeklyForecast");
 
 	let week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-	//week[new Date(1622800800 * 1000).getDay() - 1]
-
-	//new Date(1622800800 * 1000).getDay()
-				//use unix time to get day, and using getDay()
-				//we retreive the day of the week, from the week array
+	
 	for(let i = 0; i < days.length; i++){
-		console.log(apiObj[i])
+		days[i].textContent = week[new Date(apiObj[i].dt * 1000).getDay()] //we obtain the current day as a integer, and translated it to a day of the week
+		highTemp[i].textContent = `${Math.round(apiObj[i].temp.max)}°`;
+		lowTemp[i].textContent = `${Math.round(apiObj[i].temp.min)}°`;
+		forecast[i].textContent = apiObj[i].weather[0].description;
 
 	}
 }
