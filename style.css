@@ -40,7 +40,7 @@
 .switchForm {
 	display: inline
 }
-.day {
+.dayWrapper {
 	margin: 0 2vw 5vh 0 !important;
 	padding: 0 0 2vh 1vw !important;
 	width: 14vw !important;
@@ -50,10 +50,10 @@
 
 }
 
-.day h6 {
+.dayWrapper h6 {
 	padding-bottom: 1vh
 }
-.day p{
+.dayWrapper p{
 	margin-bottom: -0.5vh;
 
 }
@@ -81,7 +81,7 @@
 		width: 25vw;
 		float:right;
 	}
-	.day {
+	.dayWrapper {
 		width: 20vw !important;
 		margin: 0 2vw 5vh 0 !important;
 		background: red
@@ -90,7 +90,7 @@
  
 }
 @media screen and (max-width: 576px){
-	.day {
+	.dayWrapper {
 		width:90vw !important;
 	 	margin: 3vh auto !importants;
 		background: blue
