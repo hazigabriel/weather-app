@@ -4,6 +4,10 @@ import fetchWeeklyWeather from './fetchWeeklyData.js';
 
 let selectedSystem = "Metric"
 let lastWeatherLocation = ['Bucharest']; 
+
+
+
+
 function changeSystem() {
 	let system = document.querySelectorAll(".system");
 	document.querySelector(".switch").addEventListener("click", function(e){
@@ -23,6 +27,8 @@ function changeSystem() {
 	 
 	})
 }
+
+
 function renderSystemChange(){
 	if(lastWeatherLocation.length < 2) {
 		fetchWeather(lastWeatherLocation, selectedSystem)
@@ -44,7 +50,6 @@ function cityName(){
 	 	}
  
 		 
-
 	});
 	 
 
@@ -57,7 +62,7 @@ function getCoords(){
     	let long = position.coords.longitude;
     	lastWeatherLocation = [lat, long];
     	fetchWeeklyWeather(lat, long, selectedSystem);
-    	//alert(selectedSystem)
+    	 
   });
 });
 }

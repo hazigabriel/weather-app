@@ -12,24 +12,13 @@ function renderCurrentWeather(cityName, country, temperature, forecast, forecast
  
 
 	if(selectedSystem() == "metric"){
-		return `${Math.round(windSpeed * 3.6)} km/h ${getWindDirection(windDirection)}`;
+		return `${Math.round(windSpeed * 3.6)} km/h ${getWindDirection(windDirection)}`; //we receive the wind speed in meters per sec, and we 
+																						//multiplying the value with 3.6 to obtain km/h
 	} else {
 
 		return `${Math.round(windSpeed)} mph ${getWindDirection(windDirection)}`;
 
 	}
-}
-	document.querySelector(".cityName").textContent = `${cityName}, ${country}`;
-	document.querySelector(".temperature").textContent = Math.round(temperature)+ "°";
-	document.querySelector(".currentForecast").textContent = `${forecast}(${forecastDescpr})` ;
-	document.querySelector(".temperatureFelt").textContent = Math.round(temperatureFelt) + "°";
-	document.querySelector(".humidity").textContent = humidity + "%	 ";
-	document.querySelector(".wind").textContent =  convertWindSpeed(selectedSystem());
-	
-	
- 
-
-	
 }
 
 function getWindDirection(deg){
@@ -45,6 +34,16 @@ function getWindDirection(deg){
 	}
  
 }
+
+	document.querySelector(".cityName").textContent = `${cityName}, ${country}`;
+	document.querySelector(".temperature").textContent = Math.round(temperature)+ "°";
+	document.querySelector(".currentForecast").textContent = `${forecast}(${forecastDescpr})` ;
+	document.querySelector(".temperatureFelt").textContent = Math.round(temperatureFelt) + "°";
+	document.querySelector(".humidity").textContent = humidity + "%	 ";
+	document.querySelector(".wind").textContent =  convertWindSpeed(selectedSystem());
+	
+}
+
 
 
 
