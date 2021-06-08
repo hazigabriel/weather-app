@@ -3,22 +3,14 @@ import renderWeeklyWeather from "./renderWeeklyWeather.js"
  
 function fetchWeeklyWeather(lat, long, system){
 
-	let protocol;
-	
-	if(location.protocol === "http:") {
-		protocol = "http:"
-	} else {
-		protocol ="https:"
-	}
-	//added protocol check in order for openweather api's protocol to math the github pages protocol
 
-	fetch(`${protocol}//api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely,hourly&appid=dd56feccf641467a3fb598d6e6f9ac6f&units=${system}`, {mode: 'cors'})
+	fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely,hourly&appid=dd56feccf641467a3fb598d6e6f9ac6f&units=${system}`, {mode: 'cors'})
  		.then(function(response){
  			return response.json()
  		})
  		.then(function(response){
 			
- 			fetch(`${protocol}//api.openweathermap.org/data/2.5/weather?lat=${response.lat}&lon=${response.lon}&appid=dd56feccf641467a3fb598d6e6f9ac6f&units=${system}`, {mode: 'cors'})
+ 			fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${response.lat}&lon=${response.lon}&appid=dd56feccf641467a3fb598d6e6f9ac6f&units=${system}`, {mode: 'cors'})
 	 			.then(function(nestedResponse){
 	 				return nestedResponse.json()
 	 		})
