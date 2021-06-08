@@ -84,7 +84,7 @@
 	.dayWrapper {
 		width: 20vw !important;
 		margin: 0 2vw 5vh 0 !important;
-		background: red
+	
 	}
 
  
@@ -93,6 +93,6 @@
 	.dayWrapper {
 		width:90vw !important;
 	 	margin: 3vh auto !importants;
-		background: blue
+		
 	}
 }
