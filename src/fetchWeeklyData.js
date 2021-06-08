@@ -17,7 +17,6 @@ function fetchWeeklyWeather(lat, long, system){
 	 			.then(function(nestedResponse){	
 	 				renderCurrentWeather(response.timezone.split("/").pop(), nestedResponse.sys.country, response.current.temp, response.current.weather[0].main, response.current.weather[0].description, response.current.feels_like, response.current.humidity, response.current.wind_speed, response.current.wind_deg )
 	 				renderWeeklyWeather(response.daily);
-
 	 		})
 
  
